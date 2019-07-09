@@ -15,8 +15,8 @@ Router.route('/', function () {
 });
 
 Router.route('/tracker', function () {
-  this.layout('');
-  this.render('');
+  this.layout('trackerLayout');
+  this.render('unknownLocation');
 });
 
 Router.route('admin',function(){
@@ -93,9 +93,7 @@ Router.route('admin/locations/:name',{
   fastrender: true,
   locations: this
 })
-//#endregion
-
-
+// #endregion
 
 
 
