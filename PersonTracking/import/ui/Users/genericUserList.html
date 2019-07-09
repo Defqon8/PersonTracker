@@ -1,0 +1,15 @@
+<template name="genericUserList">
+    {{#each getUsers}}
+        <hr>
+        <h4>{{fullname}}</h4>
+        <p>Location: {{location}} </p>
+        <p>Beacon: {{beacon}}</p>
+        <button class="edituser">Edit user</button>
+    {{/each}}
+    <hr>
+    <br>
+    <p>Click user to edit him.</p>
+    <p>OR</p>
+    <button class="adduser">Add a user</button>
+    
+</template>
