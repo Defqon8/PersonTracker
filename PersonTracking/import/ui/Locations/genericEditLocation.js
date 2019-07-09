@@ -4,7 +4,11 @@ import { locations } from '../../api/locations.js';
 
 
 Template.genericEditLocation.helpers({
-    getCollection() {
+    getCollectionLocation() {
         return locations
     }
 });
+
+locations.after.update(function(){
+    Router.go('admin/locations')
+})

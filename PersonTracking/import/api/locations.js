@@ -10,7 +10,7 @@ locations.attachSchema(new SimpleSchema({
         type:String,
         label:"Location"
     },
-    LocationType:{
+    locationtype:{
         type:String,
         label:"Type of location"
     },

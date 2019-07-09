@@ -22,20 +22,20 @@ pictures.attachSchema(new SimpleSchema({
       type:String,
       label:"Function of the user"
   },
-  // location:{
-  //     type:Array,
-  //     label:"Locations where the user is active"
-  // },
-  // 'location.$' : {
-  //   type:String,
-  //   autoform: {
-  //     options :function () {
-  //    return locations.find().map(function (c) {
-  //      return {label: c.fullname, value: c._id};
-  //    });
-  //    }
-  //   }
-  // },
+  location:{
+      type:Array,
+      label:"Locations where the user is active"
+  },
+  'location.$' : {
+    type:String,
+    autoform: {
+      options :function () {
+        return locations.find().map(function (c) {
+          return {label: c.location, value: c.location};
+        });
+      }
+    }
+  },
   // scope:{
   //     type: Array,
   //     label: "Scope"

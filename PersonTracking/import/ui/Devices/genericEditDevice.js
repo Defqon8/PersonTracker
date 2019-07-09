@@ -7,4 +7,8 @@ Template.genericEditDevice.helpers({
     getCollection() {
         return devices
     }
-});
+})
+
+devices.after.update(function(){
+    Router.go('admin/devices')
+})

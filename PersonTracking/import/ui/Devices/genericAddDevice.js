@@ -7,3 +7,7 @@ Template.genericAddDevice.helpers({
         return devices
     }
 });
+
+devices.after.insert(function(){
+    Router.go('admin/devices')
+})

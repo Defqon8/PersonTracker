@@ -8,3 +8,7 @@ Template.editUserHolder.helpers({
         return pictures
     }
 });
+
+pictures.after.update(function(){
+    Router.go('admin/pictures')
+})

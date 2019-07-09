@@ -7,3 +7,7 @@ Template.genericAddLocation.helpers({
         return locations
     }
 });
+
+locations.after.insert(function(){
+    Router.go('admin/locations')
+})

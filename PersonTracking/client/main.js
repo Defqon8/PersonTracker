@@ -27,7 +27,7 @@ Router.route('admin',function(){
 // #region users
 Router.route('admin/users',function(){
   this.layout('adminLayout');
-  this.render('genericUserList')
+  this.render('genericUserList', {data:{collection: pictures}})
 })
 
 //form doesn't submit
@@ -80,15 +80,15 @@ Router.route('admin/locations',function(){
 
 Router.route('admin/locations/add',function(){
   this.layout('adminLayout');
-  this.render('genericAddLocation', {data:{locations}})
+  this.render('genericAddLocation', {data:{locations}}) 
 })
 
 Router.route('admin/locations/:name',{
   name: "edit.location",
   action: function(){
-    var editlocation = devices.find({location: this.params.name}).fetch();
+    var editlocation = locations.find({location: this.params.name}).fetch();
     this.layout('adminLayout');
-    this.render('genericEditDevice', {data:{locations: editlocation[0]}})
+    this.render('genericEditLocation', {data:{locations: editlocation[0]}})
   },
   fastrender: true,
   locations: this
