@@ -1,65 +1,9 @@
 <head>
     <title>PersonTracker</title>
   </head>
-  
+
   <template name="Menu">
       <h1>Person Tracker!</h1>
-      <a href="./" target="_blank">Live Data</a>
-      <a href="./demodata" target="_blank">Demo Data</a>
-      <a href="./collections" target="_blank">Collections</a>
-      <a href="./accounts" target="_blank">Accounts</a>
-  </template>
-  
-  <template name="Live-Data">
-      {{> yield "Menu"}}
-          <div class="c-grid">
-            {{> yield }}
-        </div>
-  </template>
-  
-  <template name="Demo-Data">
-      {{> yield "Menu"}}
-          <div class="c-grid">
-            {{> yield }}
-        </div>
-  </template>
-  
-  <template name="Collections-Data">
-      {{> yield "Menu"}}
-        <div class="c-grid">
-            {{> yield }}
-        </div>
-  </template>
-
-  <template name="Accounts-Data">
-        {{> yield "Menu"}}
-          <div class="c-grid">
-              {{> yield }}
-          </div>
-    </template>
-  
-  <template name="LiveDataPage">
-      <button>Click Me</button>
-      <p>You've pressed the button {{counter}} times.</p>
-      <h2>Learn Meteor!</h2>
-      <ul>
-        <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-        <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-        <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-        <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-      </ul>
-  </template>
-  
-  <template name="DemoDataPage">
-      <h1>Test2</h1>
-      <a href="./" target="_blank">To first page</a>
-  </template>
-  
-  <template name="CollectionsPage">
-      <a href="./students" target="_blank">Student List</a>
-    <a href="./" target="_blank">To first page</a>
-  </template>
-
-  <template name="AccountsPage">
-      <h1>Accounts</h1>
+      <a href="tracker" >Tracker</a> <br>
+      <a href="admin" >Admin</a>
   </template>
