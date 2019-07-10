@@ -1,0 +1,67 @@
+<template name="trackerLayout">
+    <h1>Person Tracker Otary</h1>
+    
+    <!-- {{> yield}} -->
+    {{> serviceStatus}}
+    {{> gateways}}
+    {{> tracker}}
+    {{> unknownLocation}}
+</template> 
+
+<template name="serviceStatus">
+    <div class="services{{#if meteorconnected}}-active{{/if}}" style="display: inline-block; padding: 24px; color:white;">Meteor</div>
+    {{#each services}}
+    <div class="services{{#if active}}-active{{/if}}" style="display: inline-block; padding: 24px; color:white;">{{service}}</div>
+    {{/each}}
+</template>
+
+<template name="gateways">
+    {{#each devices}}
+    <div>
+        <div style="display: inline-block;" class="gateway-{{status}}" >
+            <div>MAC <strong>{{MAC}}</strong> Type <strong>{{locationtype}}</strong> Loc <strong>{{location}}</strong> RSSI <strong>{{RSSImin}}</strong>   </div>
+            <div class="devicebutton"><p >{{status}}</p></div>
+        </div>
+        </div>
+    {{/each}}
+</template>
+
+<template name="tracker">
+    <h3>Tracker</h3>
+    <div style="display: flex;">
+            {{#each locations}}
+              <div >
+              {{#if haspersons}}
+                <div style="margin-right: 24px;">
+                        <p>
+                        <span><strong>{{locationtype}} {{location}}</strong> </span>
+                        </p>
+                    </div>
+                <div style="margin-right: 24px;">
+                {{#each knownperson}}
+                    <div style="background-color: forestgreen; color:white; display: inline-block; padding: 24px;">
+                        <img src="{{source}}" alt="{{source}}">
+                        <p>
+                        <span class="text"><strong>{{fullname}}</strong> </span>
+                        </p>
+                        <p>
+                        <span class="text"><strong>{{location}}</strong> </span>
+                        </p>
+                    </div>
+                {{/each}}
+                </div>
+              {{/if}}
+              </div>
+            {{/each}}
+            </div>
+</template>
+
+<template name="unknownLocation">
+    <h3>Current location unknown</h3>
+    {{#each unknownLocation}}
+    <div style="background-color: red; color:white; display: inline-block; padding: 24px;">
+        <img src="{{source}}" alt="{{source}}" >
+        <h4>{{fullname}}</h4>
+    </div>
+    {{/each}}
+</template>
