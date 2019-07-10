@@ -10,5 +10,5 @@ Template.editUserHolder.helpers({
 });
 
 pictures.after.update(function(){
-    Router.go('admin/pictures')
+    Router.go('admin/users')
 })

@@ -2,3 +2,24 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+.services{
+  background-color: red;
+}
+.services-active{
+  background-color: green
+}
+
+.gateway-Active{
+  background-color: green;
+  margin-top: 24px;
+  color:white;
+  padding: 24px;
+}
+
+.gateway-Inactive{
+  background-color: red;
+  margin-top: 24px;
+  color:white;
+  padding: 24px;
+}

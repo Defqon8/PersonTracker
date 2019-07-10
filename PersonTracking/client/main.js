@@ -16,6 +16,9 @@ Router.route('/', function () {
 
 Router.route('/tracker', function () {
   this.layout('trackerLayout');
+  // this.render('serviceStatus');
+  // this.render('gateways');
+  this.render('tracker');
   this.render('unknownLocation');
 });
 

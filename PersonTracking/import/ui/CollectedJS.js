@@ -16,3 +16,6 @@ import './Devices/genericEditDevice.js'
 import './Locations/genericLocationList.js'
 import './Locations/genericAddLocation.js'
 import './Locations/genericEditLocation.js'
+
+//tracker page
+import './Tracker/trackerpage.js'
